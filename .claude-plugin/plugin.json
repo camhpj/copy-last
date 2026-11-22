@@ -1,0 +1,9 @@
+{
+  "name": "copy-last",
+  "description": "Lets Claude Code read the commands you ran in cl shell, and their output, so you do not have to paste them.",
+  "author": { "name": "camhpj" },
+  "homepage": "https://github.com/camhpj/copy-last",
+  "repository": "https://github.com/camhpj/copy-last",
+  "license": "MIT OR Apache-2.0",
+  "keywords": ["terminal", "shell", "history", "cli"]
+}

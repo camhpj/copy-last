@@ -93,6 +93,19 @@ Your terminal must support OSC 52 for this to work.
 Under tmux, also add `set -g set-clipboard on` to your tmux configuration.
 Some terminals ignore OSC 52 text above 100 KB. `cl` warns you when a copy is that large.
 
+## Claude Code
+
+The `copy-last` plugin lets Claude Code read your recent commands and their output, so you do not have to paste an error.
+Install it from Claude Code:
+
+```text
+/plugin marketplace add camhpj/copy-last
+/plugin install copy-last@copy-last
+```
+
+Then start Claude Code inside `cl shell`, and ask about a command that you ran, for example "why did my last build fail?".
+Claude runs `cl list` and `cl -p`, which print to the terminal and do not change your clipboard.
+
 ## How it works
 
 A terminal does not record which output belongs to which command.
