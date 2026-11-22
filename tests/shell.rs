@@ -112,6 +112,11 @@ impl Term {
             ),
         )
         .unwrap();
+        if let Shell::Zsh = shell {
+            // Ubuntu's /etc/zsh/zshrc runs compinit, which can stop at a
+            // prompt about insecure directories. This skips it.
+            fs::write(home.join(".zshenv"), "skip_global_compinit=1\n").unwrap();
+        }
         setup(&home);
 
         let cl = PathBuf::from(env!("CARGO_BIN_EXE_cl"));
