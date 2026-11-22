@@ -27,9 +27,18 @@ ls: missing: No such file or directory
 
 - macOS or Linux.
 - zsh, or bash 4.4 or later. macOS includes bash 3.2, which is too old. Run `brew install bash` to get a newer bash.
-- Rust 1.85 or later, to build `cl`.
+- Rust 1.85 or later, only to build `cl` from source.
 
 ## Install
+
+```sh
+curl -fsSL https://github.com/camhpj/copy-last/releases/latest/download/install.sh | sh
+```
+
+The script downloads the build for your system from the latest release, checks its SHA-256 checksum, and installs `cl` in `~/.local/bin`.
+To install somewhere else, set `CL_INSTALL_DIR`. To install a specific release, set `CL_VERSION`, for example `CL_VERSION=v0.1.0`.
+
+To build from source instead, use Cargo:
 
 ```sh
 cargo install --git https://github.com/camhpj/copy-last
