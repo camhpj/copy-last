@@ -1,0 +1,12 @@
+{
+  "name": "copy-last",
+  "owner": { "name": "camhpj" },
+  "description": "The Claude Code plugin for cl.",
+  "plugins": [
+    {
+      "name": "copy-last",
+      "source": "./",
+      "description": "Lets Claude Code read the commands you ran in cl shell, and their output, so you do not have to paste them."
+    }
+  ]
+}
