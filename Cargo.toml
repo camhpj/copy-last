@@ -1,18 +1,29 @@
 [package]
-name = "cl"
+name = "copy-last"
 version = "0.1.0"
 edition = "2021"
-description = "Copy your last N terminal commands and their output"
+rust-version = "1.85"
+description = "Copy your last terminal commands and their output to the clipboard"
+license = "MIT OR Apache-2.0"
+repository = "https://github.com/camhpj/copy-last"
+readme = "README.md"
+keywords = ["cli", "terminal", "clipboard", "shell", "pty"]
+categories = ["command-line-utilities"]
+
+[[bin]]
+name = "cl"
+path = "src/main.rs"
 
 [dependencies]
 anyhow = "1"
-base64 = "0.22"
+base64 = "0.23"
 clap = { version = "4", features = ["derive"] }
-crossterm = "0.28"
-portable-pty = "0.8"
+libc = "0.2"
+memchr = "2"
+portable-pty = "0.9"
 serde = { version = "1", features = ["derive"] }
 serde_json = "1"
-signal-hook = "0.3"
+signal-hook = "0.4"
 strip-ansi-escapes = "0.2"
 
 [profile.release]
